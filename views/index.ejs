@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CRUD Items</title>
+</head>
+<body>
+  <h1>All Items</h1>
+  <a href="/create">Add New Item</a>
+  <ul>
+    <% items.forEach(item => { %>
+      <li>
+        <strong><%= item.name %></strong>: <%= item.description %>
+        <a href="/edit/<%= item._id %>">Edit</a>
+        <a href="/delete/<%= item._id %>">Delete</a>
+      </li>
+    <% }) %>
+  </ul>
+</body>
+</html>
